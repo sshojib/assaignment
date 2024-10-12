@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Pets</title>
+</head>
+
+<body>
+
+    <header class="p-2">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand d-flex" href="/"><img src="./assets/img/logo.webp
+                " alt="" srcset="">
+                        <h2>Paddy</h2>
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" tabindex="-1">Contact</a>
+                            </li>
+                        </ul>
+                        <a href="#"
+                            class="rounded-circle bg-light border d-flex justify-content-center align-items-center "
+                            style="height: 50px; width: 50px;"><i class="fa-regular fa-user"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="px-4 pt-5 my-5 text-center border-bottom">
+            <h5>Bringing Families Together ❤️‍🔥</h5>
+            <h1 class="display-4 fw-bold">Your Path to Adoption<br />Starts Here</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">QIt is a long established fact that a reader will be distracted by the readable
+                    content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                    <a href="#allview" class="btn btn-primary btn-lg px-4 me-sm-3">View More</a>
+
+                </div>
+            </div>
+            <div>
+                <div class="container px-5">
+                    <img src="./assets/img/pet.webp" class="img-fluid border rounded-3 shadow-lg mb-4"
+                        alt="Example image" loading="lazy">
+                </div>
+            </div>
+        </div>
+        <div class="px-4 pt-5 my-5 text-center ">
+
+            <h2 class="display-4">Adopt Your Best Friend</h1>
+                <div class="col-lg-6 mx-auto">
+                    <p class="lead mb-4">It is a long established fact that a reader will be distracted by the readable
+                        content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+                    </p>
+
+                </div>
+        </div>
+        <div class="px-4 pt-5 my-5 text-center m-auto" id="allview">
+
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5" id="categoriesShow">
+
+            </div>
+            <div class="container d-flex justify-content-between">
+                <h4>Best Deal For you</h4>
+                <button type="button"  onclick="sortPetsByPrice()" class="btn btn-primary btn-lg px-4 me-sm-3">Sort By Price</button>
+            </div>
+        </div>
+        </div>
+        <div class="px-4 pt-5 my-5 text-center m-auto">
+            <div class="container container-fluid row justify-content-between align-content-center m-auto">
+                <div class="col-md-9 border">
+                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3" id="loadPetsDiv">
+
+                    </div>
+                </div>
+                <div class="col-md-3 border">
+                    <div class="d-flex align-items-start justify-content-center row" id="likedPetsDiv">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Modal Details-->
+        <div class="modal fade show" id="detailsModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
+            aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    
+                    <div class="modal-body" id="modalBody">
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal" style="width: 100%;">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  Modal end -->
+     <!-- Modal Adopt -->
+        <div class="modal fade" id="counterModalSm" tabindex="-1" aria-labelledby="exampleModalSmLabel" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-body align-content-center">
+                        <div class="row justify-content-center">
+                            <div class="col-8 col-md-8">
+                                <img src="./assets/img/Congrates.png" alt="" style="max-width:150px; margin:0 auto;">
+                            </div>
+                            <div class="col-4 col-md-4">
+                                <span style="font-size:50px; font-weight:900" id="counterText">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Adopt End -->
+
+    </main>
+
+    <footer class="py-5">
+        <div class="row">
+            <div class="col-2">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col-2">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col-2">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col-4 offset-1">
+                <form>
+                    <h5>Subscribe to our newsletter</h5>
+                    <p>Monthly digest of whats new and exciting from us.</p>
+                    <div class="d-flex w-100 gap-2">
+                        <label for="newsletter1" class="visually-hidden">Email address</label>
+                        <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between py-4 my-4 border-top">
+            <p>© 2021 Company, Inc. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#twitter"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#instagram"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#facebook"></use>
+                        </svg></a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"
+        integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/categories.js"></script>
+</body>
+
+</html>
