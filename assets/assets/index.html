@@ -59,7 +59,140 @@
         </div>
     </header>
 
-    
+    <main>
+        <div class="px-4 pt-5 my-5 text-center border-bottom">
+            <h5>Bringing Families Together ❤️‍🔥</h5>
+            <h1 class="display-4 fw-bold">Your Path to Adoption<br />Starts Here</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">QIt is a long established fact that a reader will be distracted by the readable
+                    content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                    <a href="#allview" class="btn btn-primary btn-lg px-4 me-sm-3">View More</a>
+
+                </div>
+            </div>
+            <div>
+                <div class="container px-5">
+                    <img src="./assets/img/pet.webp" class="mx-auto mb-4"
+                        alt="Example image" loading="lazy">
+                </div>
+            </div>
+        </div>
+        <div class="px-4 pt-5 my-5 text-center ">
+
+            <h2 class="display-4">Adopt Your Best Friend</h1>
+                <div class="col-lg-6 mx-auto">
+                    <p class="lead mb-4">It is a long established fact that a reader will be distracted by the readable
+                        content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+                    </p>
+
+                </div>
+        </div>
+        <div class="px-4 pt-5 my-5 text-center m-auto" id="allview">
+
+            <div class="grid gap-2 mb-5 md:grid-cols-2 lg:grid-cols-4" id="categoriesShow">
+
+            </div>
+            <div class="container d-flex justify-content-between">
+                <h4>Best Deal For you</h4>
+                <button type="button"  onclick="sortPetsByPrice()" class="btn btn-primary btn-lg px-4 me-sm-3">Sort By Price</button>
+            </div>
+        </div>
+        </div>
+        <div class="px-4 pt-5 my-5 text-center m-auto">
+            <div class="container container-fluid row justify-content-between align-content-center m-auto">
+                <div class="col-md-9 border">
+                    <div class="row row-cols-1 w-[300px] md:row-col-2 md:w-[900px] lg:w-[900px] lg:row-col-3" id="loadPetsDiv">
+
+                    </div>
+                </div>
+                <div class="col-md-3 border">
+                    <div class="d-flex align-items-start justify-content-center row" id="likedPetsDiv">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Modal Details-->
+        <div class="modal fade show" id="detailsModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
+            aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    
+                    <div class="modal-body" id="modalBody">
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal" style="width: 100%;">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  Modal end -->
+     <!-- Modal Adopt -->
+        <div class="modal fade" id="counterModalSm" tabindex="-1" aria-labelledby="exampleModalSmLabel" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-body align-content-center">
+                        <div class="row justify-content-center">
+                            <div class="col-8 col-md-8">
+                                <img src="./assets/img/Congrates.png" alt="" style="max-width:150px; margin:0 auto;">
+                            </div>
+                            <div class="col-4 col-md-4">
+                                <span style="font-size:50px; font-weight:900" id="counterText">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Adopt End -->
+
+    </main>
+
+    <footer class="bg-black text-[#ffff]">
+        <div class="flex justify-between py-12 px-32">
+    <div>
+        <div class="flex items-center">
+            <img src="assets/img/logo.webp" alt="">
+            <h1 class="px-2 text-2xl">Peddy</h1>
+        </div>
+        <div class="mt-6">
+            <h4>Location: av. Washington 165, NY CA <br>54003</h4>
+        <h4>Phone: +31 85 964 47 25</h4>
+        <h4>Email: info@yourdomain.com</h4>
+        <h4>Openings hours: 9.00 AM - 5.00 PM</h4>
+        <div class="flex items-center gap-3 mt-3">
+            <img class="w-[25px] h-[25px]" src="https://img.icons8.com/color/48/facebook-new.png" alt="facebook-new"/>
+            <img class="w-[25px] h-[25px] bg-[#ffff]" src="https://img.icons8.com/ios-glyphs/50/twitterx--v2.png" alt="twitterx--v2"/>
+            <img class="w-[25px] h-[25px]" src="https://img.icons8.com/color/48/youtube-play.png" alt="youtube-play"/>
+            <img class="w-[25px] h-[25px]" src="https://img.icons8.com/fluency/50/instagram-new.png" alt="instagram-new"/>
+        </div>
+        <div>
+            <h2 class="text-lg font-bold">Useful Links</h2>
+            <ul class="text-[#797878] mt-8">
+                <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Animals</a></li>
+            <li><a href="">Foundation</a></li>
+            <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="text-lg font-bold">Drop a Message</h2>
+            <input class="input input-borderd bg-[#3b3b3b] p-3 w-[168px] rounded-xl" type="text" placeholder="Enter your email">
+            <div class="mt-4">
+                <button class="btn bg-[#0E7A81] py-3 px-12 rounded-xl text-[#ffff] border-none">Subscribe</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</footer>
+
+
 
 
 
